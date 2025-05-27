@@ -14,9 +14,9 @@ Repositories:
     <id>papermc-repo</id>
     <url>https://repo.papermc.io/repository/maven-public/</url>
 </repository>
-
+```
 Dependencies:
-
+```
 <dependency>
     <groupId>com.github.Graymont</groupId>
     <artifactId>Claymore-Utils</artifactId>
