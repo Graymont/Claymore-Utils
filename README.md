@@ -5,7 +5,7 @@ or maybe uncolouredText() to remove any color codes and symbols (often used for 
 to use this api simply put these on your pom.xml file
 
 Repositories:
-
+```
 <repository>
     <id>jitpack.io</id>
     <url>https://jitpack.io</url>
@@ -22,3 +22,4 @@ Dependencies:
     <artifactId>Claymore-Utils</artifactId>
     <version>1.0</version>
 </dependency>
+```
