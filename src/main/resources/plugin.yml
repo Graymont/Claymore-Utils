@@ -1,0 +1,4 @@
+name: ClaymoreUtils
+version: '1.0-ClaymoreUtils'
+main: org.claymoreutils.claymoreUtils.ClaymoreUtils
+api-version: '1.21'
