@@ -3,14 +3,13 @@ package org.claymoreutils.claymoreUtils;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.TextComponent;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.text.DecimalFormat;
 import java.util.regex.Matcher;
@@ -116,6 +115,49 @@ public class UserInterface {
         Inventory gui = Bukkit.createInventory(p, size*9, sendText("&n"+name));
 
         return gui;
+    }
+
+    public static ItemStack getHeaderFooter(){
+        ItemStack border = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+        ItemMeta borderMeta = border.getItemMeta();
+        borderMeta.setDisplayName(" ");
+        border.setItemMeta(borderMeta);
+
+        return border;
+    }
+
+    public static void SetHeaderFooter(Inventory inventory){
+        int size = inventory.getSize();
+        for (int i = 0; i < 9; i++) {
+            inventory.setItem(i, getHeaderFooter());
+        }
+        for (int i = size-9; i < size; i++) {
+            inventory.setItem(i, getHeaderFooter());
+        }
+    }
+
+    public static void SetFooter(Inventory inventory){
+        int size = inventory.getSize();
+        for (int i = size-9; i < size; i++) {
+            inventory.setItem(i, getHeaderFooter());
+        }
+    }
+
+    public static ItemStack getBackground(Material material){
+        ItemStack border = new ItemStack(material);
+        ItemMeta borderMeta = border.getItemMeta();
+        borderMeta.setDisplayName(" ");
+        border.setItemMeta(borderMeta);
+
+        return border;
+    }
+    public static void SetBackground(Inventory inventory, Material material){
+        int size = inventory.getSize();
+        for (int i = 0; i < size; i++) {
+            if (inventory.getItem(i) == null){
+                inventory.setItem(i, getBackground(material));
+            }
+        }
     }
 
 }
