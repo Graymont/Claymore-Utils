@@ -161,7 +161,7 @@ public class UserInterface {
     }
 
     public static void APITest(Player player){
-        player.sendMessage("responded");
+        player.sendMessage("hello world!");
     }
 
 }
