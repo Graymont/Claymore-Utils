@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ClaymoreUtils:jar">
+    <output-path>$PROJECT_DIR$/../../../../Minecraft Plugin Target</output-path>
+    <root id="archive" name="ClaymoreUtils.jar">
+      <element id="module-output" name="ClaymoreUtils" />
+    </root>
+  </artifact>
+</component>
