@@ -164,4 +164,8 @@ public class UserInterface {
         player.sendMessage("hello world 2!");
     }
 
+    public static void SendTitle(Player player, String title, String subtitle, int dur1, int dur2, int dur3){
+        player.sendTitle(sendText(title), sendText(subtitle), dur1, dur2, dur3);
+    }
+
 }
